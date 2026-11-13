@@ -1,0 +1,7 @@
+method,n_rules,share_significant_BH_q05,share_productive
+Apriori,1429,1.0,0.27501749475157455
+Neural (verified),1410,1.0,0.27163120567375887
+Neural consensus,1377,1.0,0.2701525054466231
+Apriori [full train],1214,1.0,0.41927512355848434
+Neural (verified) [full train],1182,1.0,0.40947546531302875
+Neural consensus [full train],1172,1.0,0.4087030716723549

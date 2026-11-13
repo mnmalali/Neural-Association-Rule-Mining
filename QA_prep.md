@@ -1,0 +1,17 @@
+# Q&A preparation (likely questions and honest answers)
+
+1. **What is new here / what does the neural network add?** It proposes rules from P(c|A) estimates learned by a denoising autoencoder; the data then verifies them. On Adult it is as accurate and stable as Apriori, not better. The added value is the verified + explained + audited pipeline and the measurement of where a neural miner fails.
+2. **Why verify on the data? Isn't that cheating?** Raw proposals are only 70% precise (the network is slightly over-confident near thresholds: 0.78 predicted vs 0.71 true in the 0.7-0.8 bin). Verification gives exact support/confidence/lift; the network only selects candidates.
+3. **Why does Apriori beat it on speed?** With 55 items the lattice is tiny (0.5 s). Neural mining is meant for very large item spaces; we did not test those (limitation).
+4. **Why is the untrained network in the experiments?** Ablation: random weights recover 0.1% of rules, so learning (not verification) produces the rules.
+5. **Why are Apriori and FP-Growth identical?** They are different algorithms for the same task: both return all frequent itemsets, so the rules are identical (we checked 1,214 = 1,214).
+6. **How do you know rules are not spurious?** Permutation null (all dependencies destroyed): 5.2 false rules per run at n=1,000 for Apriori, 4.0 neural, 3.8 consensus; 0 at n=5,000. Fisher/BH is useless at this n (100% pass); productivity shows only 42% of rules add information beyond sub-rules.
+7. **Is the neural improvement against spurious rules significant?** No. 1.2 fewer false rules per run and +1.5 points replication at n=500 are within run-to-run noise (sd ~2 points).
+8. **Why is consensus less stable?** It requires two borderline conditions (data and network) to hold, so borderline rules drop out more often (Jaccard 0.92 vs 0.94).
+9. **How is understandability measured?** Proxies: number of rules (1,172 -> 479 after pruning), conditions per rule (2.6), plus natural-language rule cards. No human study yet; protocol in report Section 6.
+10. **What is the explainability component?** Occlusion: remove one antecedent item at a time and measure the drop in network P(c|A); 'capital-gain = high' carries ~0.5 of P(income>50K) in the top rules, the other conditions ~0. Plus calibration and failure analysis.
+11. **Fairness?** 30% of men vs 11% of women earn >50K in the data; 57% of rules mention sex or race; disparate-impact ratio for sex is 0.41 (rules) and 0.29 (tree), below the 0.8 rule of thumb; removing sex/race barely changes it (0.41 -> 0.42) because of proxies such as relationship=Husband => sex=Male (>99.9%).
+12. **Privacy?** Min rule support is 1,713 people; Laplace noise on the three verification counts keeps F1 0.98 at epsilon=1 per statistic. Caveat: the network is not trained with DP-SGD.
+13. **Why Adult?** Public, real, mixed-type, classic for ARM, with protected attributes needed for the ethics component. UCI/Kaggle were not reachable from our build environment, so the same file was taken from a public GitHub mirror of the UCI data.
+14. **Why a rule-list classifier has lower AUC than the tree?** "Any rule fires" is a coarse score; accuracy and F1 are equal or better (0.806 / 0.643 vs tree 0.764 / 0.642); the tree was trained with balanced class weights.
+15. **Can the experiments be reproduced?** Yes: fixed seed 42, `python run_all.py` (about 4 minutes), all numbers in the report/slides are generated from results/.

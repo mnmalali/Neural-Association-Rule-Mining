@@ -1,0 +1,6 @@
+key,confidence,lift
+capital-loss=none & income=>50K & relationship=Husband => sex=Male,1.0,1.49205725757179
+capital-loss=none & hours-per-week=overtime & relationship=Husband => sex=Male,1.0,1.49205725757179
+income=>50K & race=White & relationship=Husband => sex=Male,1.0,1.49205725757179
+capital-gain=none & hours-per-week=overtime & relationship=Husband => sex=Male,1.0,1.49205725757179
+capital-gain=none & income=>50K & relationship=Husband => sex=Male,1.0,1.49205725757179

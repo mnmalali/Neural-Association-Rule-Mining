@@ -1,0 +1,9 @@
+E1 main comparison
+E2 held-out accuracy
+E3 sample-size sweep
+E4 stability
+E5 spurious rules
+E6 understandability
+E7 downstream + fairness
+E8 privacy
+done in 4.0 min

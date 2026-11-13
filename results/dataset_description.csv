@@ -1,0 +1,14 @@
+attribute,n_values,values (top 4),missing,sensitive
+age,6,"26-35, 36-45, <=25, 46-55",0,False
+workclass,5,"Private, Gov, Self-employed, Without-pay",2799,False
+education,6,"HS-grad, Some-college, Bachelors, No-HS",0,False
+marital-status,5,"Married, Never-married, Divorced/Separated, Widowed",0,False
+occupation,14,"Prof-specialty, Craft-repair, Exec-managerial, Adm-clerical",2809,False
+relationship,6,"Husband, Not-in-family, Own-child, Unmarried",0,False
+race,3,"White, Black, Other",0,True
+sex,2,"Male, Female",0,True
+capital-gain,3,"none, high, low",0,False
+capital-loss,2,"none, some",0,False
+hours-per-week,3,"full-time, overtime, part-time",0,False
+native-country,2,"US, Non-US",857,False
+income,2,"<=50K, >50K",0,False

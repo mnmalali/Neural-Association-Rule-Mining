@@ -1,0 +1,4 @@
+rule set,n_rules,mean_conditions,share_<=2_conditions,distinct_attributes_in_consequents
+Apriori (raw),1214,2.771004942339374,0.21334431630971992,6
+Neural consensus (raw),1172,2.7687713310580206,0.2150170648464164,6
+Neural consensus + productivity pruning,479,2.636743215031315,0.3235908141962422,6

@@ -1,0 +1,9 @@
+key,support,confidence,lift
+hours-per-week=part-time & race=White & relationship=Own-child => income=<=50K,0.05370148293310714,0.9967426710097719,1.3102751145475657
+age=<=25 & hours-per-week=part-time & race=White => income=<=50K,0.06554739828599843,0.996,1.3092988311288833
+age=<=25 & race=White & relationship=Own-child => income=<=50K,0.0925443856211062,0.9952815350739226,1.3083543679884013
+age=<=25 & marital-status=Never-married & sex=Female => income=<=50K,0.076223346690456,0.9946564885496183,1.3075327086674446
+age=<=25 & relationship=Own-child & sex=Male => income=<=50K,0.058849337506215446,0.9935802469135803,1.3061179276272068
+hours-per-week=part-time & marital-status=Never-married & race=White => income=<=50K,0.07613559916932347,0.9935114503816794,1.3060274906605367
+age=<=25 & marital-status=Never-married & race=White => income=<=50K,0.1432039544882857,0.9924994932090007,1.3046972152154155
+capital-gain=none & relationship=Own-child & sex=Female => income=<=50K,0.06513790985404662,0.9924242424242424,1.3045982937650886

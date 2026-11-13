@@ -1,0 +1,11 @@
+key,confidence,test_conf,drop,count
+age=<=25 & race=White & sex=Male => marital-status=Never-married,0.8302290076335878,0.8034934497816594,0.026735557851928382,2719
+age=<=25 & sex=Male & workclass=Private => marital-status=Never-married,0.8231748158070998,0.7988871224165341,0.02428769339056569,2458
+hours-per-week=part-time & race=White & sex=Female => income=<=50K,0.938366718027735,0.914410480349345,0.023956237678389947,2436
+age=<=25 & hours-per-week=full-time & native-country=US => marital-status=Never-married,0.8175112251443233,0.7952167414050823,0.022294483739241033,2549
+age=<=25 & hours-per-week=full-time & race=White => marital-status=Never-married,0.8079649004387445,0.7857142857142857,0.022250614724458773,2394
+age=<=25 & native-country=US & sex=Male => marital-status=Never-married,0.8381828978622327,0.8163265306122449,0.02185636724998774,2823
+age=<=25 & sex=Male => marital-status=Never-married,0.8360918312867058,0.8145363408521303,0.021555490434575497,3132
+age=<=25 & hours-per-week=full-time & workclass=Private => marital-status=Never-married,0.8040345821325648,0.7827529021558872,0.021281679976677625,2232
+age=<=25 & capital-gain=none & sex=Male => marital-status=Never-married,0.8387541345093715,0.8188265635074146,0.019927571001956967,3043
+hours-per-week=full-time & race=White & relationship=Own-child => marital-status=Never-married,0.8637770897832817,0.844354018311292,0.01942307147198974,1953
