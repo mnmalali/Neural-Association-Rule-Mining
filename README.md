@@ -75,14 +75,7 @@ python run_all.py
 
 The run writes updated tables to `results/` and figures to `figures/`. The current reference run takes approximately 7 minutes on a typical 2-core machine; runtime varies with hardware and package versions.
 
-To rebuild the report and presentation after regenerating the results:
-
-```bash
-python build_report.py
-python make_slide_numbers.py
-npm install pptxgenjs
-node build_slides.js
-```
+The generated report and presentation are included in [`report/`](report/). The document-generation scripts are intentionally omitted from this public upload.
 
 ## Repository layout
 
@@ -94,10 +87,8 @@ node build_slides.js
 ├── results/     CSV tables, run log, and summary.json
 ├── src/         Data preparation, mining, neural model, explanations
 ├── run_all.py   Main experiment runner
-├── build_report.py
-├── build_slides.js
 ├── requirements.txt
-└── QA_prep.md   Project defense / review preparation notes
+└── README.md
 ```
 
 ## Dataset and attribution
